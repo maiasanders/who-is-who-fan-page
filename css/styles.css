@@ -1,0 +1,45 @@
+body {
+    background-color: #141825;
+    color: #b2d4e6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    text-decoration: underline;
+}
+header {
+    text-align: center;
+}
+img {
+    max-width: 400px;
+    height: auto;
+}
+table {
+    background-color: #1c2132;
+    padding: 10px;
+}
+blockquote{
+    background-color: #1c2132;
+    max-width: 70%;
+    padding: 20px;
+    font-style: italic;
+}
+#speaker {
+    font-weight: 100;
+}
+a:link {
+    color: rgb(188, 110, 123);
+}
+a:visited {
+    color: rgb(115, 69, 77)
+}
+a:hover {
+    color: rgb(216, 138, 151);
+}
+form {
+    background-color: #1c2132;
+    max-width: 1000px;
+}
+input {
+    background-color: #2b324a;
+    color: #b2d4e6;
+}

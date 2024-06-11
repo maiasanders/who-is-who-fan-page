@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who is Who? - Guestbook</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <form action="http://localhost:5050/api/guestbook" method="POST">
+        <label for="name">Name:</label>
+        <input name="name" id="name" type="text" required />
+        <div>&nbsp;</div>
+
+        <label for="email">Email:</label>
+        <input name="email" id="email" type="email" required />
+        <div>&nbsp;</div>
+
+        <label for="date-of-birth">Date of birth:</label>
+        <input name="date-of-birth" id="date-of-birth" type="date" />
+        <div>&nbsp;</div>
+
+        <label for="favorite-color">Favorite color:</label>
+        <input name="favorite-color" id="favorite-color" type="color" />
+        <div>&nbsp;</div>
+
+        <label for="lucky-number">Lucky number:</label>
+        <input name="lucky-number" id="lucky-number" type="number" />
+        <div>&nbsp;</div>
+
+        <label for="confirmation">Is the entered data correct?</label>
+        <input name="confirmation" id="confirmation" type="checkbox" />
+        <div>&nbsp;</div>
+
+        <label for="submit">Allons y!</label>
+        <input name="submit" id="submit" type="submit" />
+
+    </form>
+</body>
+</html>
