@@ -4,33 +4,51 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-areas: "head head"
+    grid-template-areas: ". ."
                         "main sec-nav"
                         "foot foot";
+    position: relative;
+    top: 10vw;
 }
 main {
     /* position: relative;
     top: 10vw; */
+    margin-bottom: 2em;
 }
 h2 {
-    text-decoration: underline;
+    text-decoration: none;
     text-align: center;
+    font-family: "Squada One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 header {
+    font-family: "Squada One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
     display: flex;
     height: 10vw;
+    width: 100%;
     grid-area: head;
     justify-content: space-between;
     align-content: center;
-    /* position: fixed;
-    background-color: #141825; */
+    position: fixed;
+    background-color: rgba(10, 13, 21, 0.9);
+    z-index: 1;
+    top: 0;
+}
+header img {
+    order: -1;
 }
 
 nav > ul {
     list-style: none;
 }
 
+header nav {
+    padding: 1em;
+}
 header nav > ul {
     display: flex;
     gap: 1em;
@@ -40,6 +58,7 @@ header nav > ul > li {
     padding: .5em;
     border-radius: .25em;
 }
+header nav > ul > li
 
 header > img {
     max-width: 400px;
@@ -54,7 +73,7 @@ header > img {
 table {
     background-color: #1c2132;
     padding: 10px;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 tr:nth-child(even) {
     background-color: rgb(43, 51, 74, 30%);
@@ -65,7 +84,7 @@ tr:nth-child(odd) {
 td {
     text-align: center;
     border-bottom: 1px #353d5b;
-    
+
 }
 
 #quote-section {
@@ -77,6 +96,7 @@ blockquote{
     max-width: 70%;
     padding: 20px;
     font-style: italic;
+    border-radius: 1em;
 }
 #speaker {
     font-size: small;
@@ -100,16 +120,33 @@ a:hover {
 form {
     background-color: #1c2132;
     max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-input {
+input, textarea {
     background-color: #2b324a;
     color: #b2d4e6;
+    border-radius: 5px;
+    border-style: none;
+    padding: .5em;
+}
+textarea {
+    width: 50%;
+    height: 10em;
+}
+input:focus, textarea:focus {
+    background-color: #69769e;
+}
+fieldset {
+    background-color: #b2d4e6;
 }
 
 table img {
     width: 10em;
     height: 10em;
     object-fit: cover;
+    border-radius: 1em;
 }
 
 #right-panel {
@@ -119,21 +156,29 @@ table img {
     position: fixed;
     right: 0;
     top: 10vw;
+    width: 25%;
 }
 #right-panel nav > ul {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    /* padding: 0%; */
 }
 #right-panel nav li {
     background-color: #1c2132;
     padding: 1em;
     border-radius: 1em 0 0 1em;
+    font-family: "Squada One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-#right-panel nav li:hover {
+#right-panel nav li:hover, nav li:hover {
     background-color: #394260;
 }
 
 footer {
     grid-area: foot;
+    /* position: fixed;
+    bottom: 0;
+    height: 2em; */
 }

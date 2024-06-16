@@ -5,37 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who is Who? - Guestbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
+
+
 <body>
-    <form action="http://localhost:5050/api/guestbook" method="POST">
-        <label for="name">Name:</label>
-        <input name="name" id="name" type="text" required />
-        <div>&nbsp;</div>
+    <header>
+        <div id="title">
+            <h1>Who is Doctor Who?</h1>
+            <p>(A brief introduction to the man (or woman) in the big blue box)</p>
+        </div>
+        <img src="img\Doctor-Who-Logo.png" alt="Doctor Who official logo" />
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Submit your info</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
 
-        <label for="email">Email:</label>
-        <input name="email" id="email" type="email" required />
-        <div>&nbsp;</div>
+        <form action="http://localhost:5050/api/guestbook" method="POST">
+            <label for="name">Name:</label>
+            <input name="name" id="name" type="text" required />
+            <div>&nbsp;</div>
 
-        <label for="date-of-birth">Date of birth:</label>
-        <input name="date-of-birth" id="date-of-birth" type="date" />
-        <div>&nbsp;</div>
+            <label for="email">Email:</label>
+            <input name="email" id="email" type="email" required />
+            <div>&nbsp;</div>
 
-        <label for="favorite-color">Favorite color:</label>
-        <input name="favorite-color" id="favorite-color" type="color" />
-        <div>&nbsp;</div>
+            <label for="date-of-birth">Date of birth:</label>
+            <input name="date-of-birth" id="date-of-birth" type="date" />
+            <div>&nbsp;</div>
 
-        <label for="lucky-number">Lucky number:</label>
-        <input name="lucky-number" id="lucky-number" type="number" />
-        <div>&nbsp;</div>
+            <label for="favorite-color">Favorite color:</label>
+            <input name="favorite-color" id="favorite-color" type="color" />
+            <div>&nbsp;</div>
 
-        <label for="confirmation">Is the entered data correct?</label>
-        <input name="confirmation" id="confirmation" type="checkbox" />
-        <div>&nbsp;</div>
+            <label for="lucky-number">Lucky number:</label>
+            <input name="lucky-number" id="lucky-number" type="number" />
+            <div>&nbsp;</div>
 
-        <label for="submit">Allons y!</label>
-        <input name="submit" id="submit" type="submit" />
+            <label for="comments" >Any comments?</label>
+            <textarea name="comments" id="comments" rows="5" cols="30"> </textarea>
+            <div>&nbsp;</div>
 
-    </form>
+            <label for="confirmation">Is the entered data correct?</label>
+            <input name="confirmation" id="confirmation" type="checkbox" />
+            <div>&nbsp;</div>
+
+            <label for="submit">Allons y!</label>
+            <input name="submit" id="submit" type="submit" />
+
+        </form>
+    </main>
+    <footer>
+        <p>&copy;Maia Sanders 2024 - Images &copy;BBC 1963 - 2024</p>
+    </footer>
 </body>
 </html>
