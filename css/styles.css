@@ -74,6 +74,7 @@ table {
     background-color: #1c2132;
     padding: 10px;
     border-radius: 10px;
+    margin: .5em;
 }
 tr:nth-child(even) {
     background-color: rgb(43, 51, 74, 30%);
@@ -84,7 +85,9 @@ tr:nth-child(odd) {
 td {
     text-align: center;
     border-bottom: 1px #353d5b;
-
+}
+th {
+    text-align: center;
 }
 
 #quote-section {
@@ -97,6 +100,7 @@ blockquote{
     padding: 20px;
     font-style: italic;
     border-radius: 1em;
+    margin-left: 2em;
 }
 #speaker {
     font-size: small;
@@ -105,6 +109,10 @@ blockquote{
 }
 .title {
     color: rgba(178, 212, 230, .30);
+}
+
+#links-section > ul {
+    list-style: none;
 }
 a:link {
     color: rgb(188, 110, 123);
@@ -178,7 +186,98 @@ table img {
 
 footer {
     grid-area: foot;
+    margin-left: 1rem;
     /* position: fixed;
     bottom: 0;
     height: 2em; */
+}
+
+
+/* medium screens */
+@media only screen and (max-width: 750px) {
+    header {
+        position: static;
+    }
+    #title > p {
+        display: none;
+    }
+    #title {
+        align-self: center;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "head" "sec-nav" "main" "foot";
+        position: static;
+    }
+
+
+    #right-panel {
+        flex-direction: row;
+        position: static;
+        width: 100%;
+        background-color: rgba(10, 13, 21, 0.9);
+    }
+    #right-panel nav {
+        display: flex;
+        flex-grow: 1;
+    }
+    #right-panel nav > ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-grow: .9;
+    }
+    #right-panel nav li {
+        padding: .5em;
+        border-radius: 1em;
+        width: 30%;
+        text-align: center;
+    }
+}
+
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "head" "sec-nav" "main" "foot";
+        position: static;
+    }
+    header nav {
+        padding: 0;
+    }
+    header nav > ul {
+        justify-content: space-evenly;
+        padding-left: 0;
+    }
+    header nav > ul > li {
+        width: 40%;
+        border-radius: 1em;
+    }
+    header {
+        /* display: grid;
+        grid-template-columns: 1fr 8fr;
+        grid-template-areas: "head-pic title" "links links"; */
+        flex-direction: column;
+        height: auto;
+    }
+    header img {
+        display: none;
+    }
+    /* #title {
+        grid-area: title;
+    }
+    header nav {
+        grid-area: links;
+    } */
+    #right-panel nav li {
+        flex-grow: 1;
+        width: auto;
+    }
+    #right-panel nav {
+        justify-content: space-evenly;
+    }
+    nav ul {
+        padding-left: 0;
+    }
 }
